@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Performance dashboard for in-game guild strategy"
-author: sal
+author: Sep
 categories: [ Excel, Spreadsheet ]
 image: assets/images/maple1.jpeg
 featured: true
