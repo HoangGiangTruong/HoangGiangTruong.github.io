@@ -19,6 +19,3 @@ So, if you're on the hunt for a data analyst who knows their stuff and brings a 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/data-analyst-colleagues-in-office.jpeg" alt="Data Analyst" /></p>
 
 
-</div>
-</div>
-</div>
