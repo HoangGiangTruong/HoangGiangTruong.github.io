@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Amazon Scrapping project: the beautiful and budgeted grinder- Timemore C2"
+title: "Amazon Scrapping: The stunning grinder- Timemore C2"
 author: Sep
 categories: [ Python ]
 image: assets/images/timemoreC2fold.webp
