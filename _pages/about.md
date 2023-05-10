@@ -18,12 +18,6 @@ So, if you're on the hunt for a data analyst who knows their stuff and brings a 
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/data-analyst-colleagues-in-office.jpeg" alt="Data Analyst" /></p>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
-
-<h4>Questions or bug reports?</h4>
-
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
-
 
 </div>
 </div>
