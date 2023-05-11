@@ -2,12 +2,11 @@
 name: "Data Analyst Portfolio"
 title: "Giang Truong Data Analyst Portforlio"
 description: "The place that I put all my progression and data related."
-logo: 'assets/images/Logo.png'
-favicon: 'assets/images/Logo.png'
+logo: 'assets/images/Logo1.png'
+favicon: 'assets/images/Logo1.png'
 baseurl: ""
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
 
