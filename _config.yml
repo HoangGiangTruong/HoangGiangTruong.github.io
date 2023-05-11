@@ -2,8 +2,8 @@
 name: "Data Analyst Portfolio"
 title: "Giang Truong Data Analyst Portforlio"
 description: "The place that I put all my progression and data related."
-logo: 'assets/images/Logo1.png'
-favicon: 'assets/images/Logo1.png'
+logo: 'assets/images/logoblue.png'
+favicon: 'assets/images/logoblue.png'
 baseurl: ""
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
