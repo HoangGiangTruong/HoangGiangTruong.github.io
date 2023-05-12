@@ -87,6 +87,9 @@ section.recent-posts {
 .article-post ul ul {
     list-style: disc;
     margin-bottom: 0rem;
+    text-align: justify;
+}
+
 }
 
 @media (min-width:576px) {
