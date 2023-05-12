@@ -17,6 +17,7 @@ The dashboard showcase is available [here](https://docs.google.com/spreadsheets/
 ## Key skills
 
 Data Manipulation, Data Cleaning, Data Validation, Business logic, Data story telling 
+
 The function that I used most in this dashboard is INDEX- MATCH and conditional formating, it makes immediately impact to the readers  
 
 ## Introduction
@@ -34,7 +35,7 @@ In this matter. I could call the selling point for the game about ability to soc
 
 TheLostSocks- however, being #4 in the server demonstrates the competitive strength. However, they have a balanced playstyle which is unique for the server, allowing members can have a more relaxed, chill atmosphere while still can archive higher competitive content in the game. 
 
-## TheLostSocks SWOT analysis: 
+## TheLostSocks SWOT analysis 
 
 I was mentioning Maslow's model, so here is the SWOT analysis of this guild. I drafted it so I could find something useful for the dashboard
 
@@ -83,7 +84,7 @@ Therefore, I have top players in the guild. I also add some charts to manage gui
 
 The sheet would run automatically whenever Ven adds new content weekly, leading to low effort for him (and for me). Again, I have to mention that I am lazy so I want to optimise my time and performance as much as possible. 
 
-## Making Dashboard 
+## Dashboard  
 
 I showed the spreadsheet to the leader's team, and they found it useful, and the leader wants to show it to guildies so they could know their progress of themselves. Now I have another audience: Guild members
 By targeting guild members as my audience, I decided to make a dashboard, which briefly shows weekly records and some descriptive analysis for them to see. Some details I didn't post in the dashboard because it is more for management, not for members. The purpose of the dashboard is to help guildies track their record, and summary what happened in the guild for the last week/month. This dashboard must not look like a company record because this is a game, and we play games for fun, not for work. 
