@@ -77,6 +77,9 @@ section.recent-posts {
     padding-bottom: 20px;
     margin-bottom: -1px;
 }
+.article-post {
+  text-align: justify;
+}
 
 .article-post ol,
 .article-post ul {
@@ -87,7 +90,6 @@ section.recent-posts {
 .article-post ul ul {
     list-style: disc;
     margin-bottom: 0rem;
-    text-align: justify;
 }
 
 }
