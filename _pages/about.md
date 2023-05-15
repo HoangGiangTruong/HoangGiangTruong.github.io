@@ -12,7 +12,9 @@ comments: true
   
   <p>With skills in R, Python, and SQL, I turn data into gold. I brew stunning visualizations with Tableau and PowerBI, transforming spreadsheets into vibrant pour-over-inspired insights. From data cleaning to predictive analysis, I'm your coffee-infused wizard.<p> 
   
-  <p>Let's embark on a data adventure, pouring specialty coffee-inspired insights together!
+  <p>Let's embark on a data adventure, pouring specialty coffee-inspired insights together!<p>
+  
+  You can find me [LinkedIn](http://www.linkedin.com/in/hgiangtr2903)
   
   </p>
   
