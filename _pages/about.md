@@ -14,7 +14,8 @@ comments: true
   
   <p>Let's embark on a data adventure, pouring specialty coffee-inspired insights together!<p>
   
- <p> You can find me [LinkedIn](http://www.linkedin.com/in/hgiangtr2903) [Github](https://github.com/PouringInsights)
+ <p> You can find me <a href="http://www.linkedin.com/in/hgiangtr2903">LinkedIn</a> <a href="https://github.com/PouringInsights">Github</a>
+
   
   </p>
   
