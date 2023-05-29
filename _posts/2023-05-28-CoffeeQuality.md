@@ -11,16 +11,19 @@ hidden: true
 ---
 Discover the world of specialty coffees through our captivating analysis. Dive into the characteristics that define exceptional beans, and uncover the passionate producers behind these extraordinary brews. 
 
+* Warning: This article is very very long, but you can read it in many way. If you want to see the insights only, please click on the Conclusion part. If you want to see the coding part, please check the python code [here](https://github.com/PouringInsights/CoffeeQuality/blob/main/coffeequality.ipynb) or go through the article in order to get the explaination. For whatever purposes that you read this article, I would like to thank you everyone in advance for reading it. 
+
 ### Introduction
 Coffee plays an important part in many people's life. Indeed, some people would take a cup of coffee to start a day by focusing and awakening, helping them have a productive day. It is the reason for using coffee, but why specialty coffee? Here is the simple answer: it contains better taste. It is the beverage recipe, we all want to have it taste good, it’s the most enjoyable part from taking a coffee cup. Moreover, it is traceable and transparent, people are allowed to trace back to the origin, knowing why its made, and how its made and prepared. Using specialty coffee also helps small scale farmers with ethical sources because the farmers are usually paid fair prices for their crops, ensuring a better livelihood and economic stability for their communities. Choosing specialty coffee supports a more equitable and transparent coffee supply chain. It also support environmental sustainability because specialty coffee producers often prioritize environmentally friendly farming practices. 
 ### Problem Statement
 Your questions would be like: How do I know what kind of coffee would taste best? Everything taste like… coffee. I barely know the difference between each cup, do I really need to pay attention on the high quality coffee? I’m already satisfied with my current coffee daily and they taste decent, it doesn’t have much difference between my local coffee shop and Starbucks at all. 
+
 I understand the confusion, I don’t want to set the boundary for coffee expert and the normal people, I want to make this simple as much as possible because in the end, everyone has different reference for their taste so it is such a bias if I insist on the fancy coffee instead of normal coffee. However, you are the one who actually judge the coffee shop. For example: you can basically know some coffee taste bad because it made you feel wrongly, or it doesn’t serve its purpose to help you awake for a working day,… You only feel hard to notice the slightly better coffee, but if the gap is significantly better, you probably know it. It is how it worked. The specialty coffee could allow you get what you prefer. For example: you prefer strong coffee, or you prefer some juicy coffee, everything you need would be found from specialty coffee shop. The various technique from bean to cup would allow a specialty coffee shop give you exactly what you want for your preference. 
 
 In this article, I would describe some sort of coffee qualification that allow the customers to know coffee characteristics and even for a coffee owners would know about the coffee itself, as well as where to get it. For the reference, I will use the book: “The World Atlas of Coffee” of James Hoffman, the famous barista champion and influence in the coffee industry, his book has described all the coffee varieties and the origin, I could either read the whole book and memorise it, or using my analytical skills to extract information that I need then look at the book for more context information. 
 
 ### Dataset 
-The dataset is updated in May 2023, which is new when I started writing this article. It was scrapped from Coffee Quality Institute- a non profit organization that works to improve the quality and value of coffee worldwide. All the code for the scrapper can be found in: https://github.com/fatih-boyar/coffee-quality-data-CQI/tree/main 
+The dataset is updated in May 2023, which is new when I started writing this article. It was scrapped from Coffee Quality Institute- a non profit organization that works to improve the quality and value of coffee worldwide. All the code for the scrapper can be found in: [github](https://github.com/fatih-boyar/coffee-quality-data-CQI/tree/main) 
 He has an amazing work with this scrapper in python and cleaned it as well. In my article, I will use his work instead of leading you to the technique of scrapping. I would update my analysis for that part in the future to see the change in the industry, but for now, I will use the arabica data that is cleaned in order to focus on exploration data analysis. 
 
 ```python
@@ -97,9 +100,13 @@ In illustration, I would use the flavor wheel, it looks like this, and don’t g
 ![image](https://github.com/PouringInsights/pouringinsights.github.io/assets/100246099/d7845f49-a232-45ac-8b54-cd0cf578de47)
 
 OK I admit that this is quite hard to understand, the roasters usually use some word such as “apple”, “caramel”, “Strawberry” to describe their tastes, but it tastes like.. coffee, while they put some “irrelevant” word on it? Those words are coming from this wheel. The example of Apple or Strawberry are the way to communicate that the expected taste would have some level of sweetness and acidity. You don’t need to identify the taste with individual note such as “apple” or “caramel”, you only need to know that is sweet or fruity in example. 
+
 The Flavor is the preference, it represents some good notes in general instead of bad notes. For example: you don’t want your coffee taste bitter but wanted to it has more sweet, or it should taste like fruity, those categories are totally different from each other, the flavor score is not bias like sweet is better than acidity because its user preference, the score is the total combination that has no bad notes, that’s all. However, this score has so much potential to rely on in tasting coffee. Therefore, Flavor is the important trait that will be used in further test. 
+
 Another trait that is hard to understand is about balance. It is tricky attribute. Unlike Flavors, the score of balance represents the combination of flavour and mouthfeel. Many other attribute is relevant to this, we can see it in the heat map of correlation later. This attribute is like a well- mixed piece of music. The low score of balance is like one element too loud compare to the others. So that, the better mixture of coffee notes would bring higher balance. 
-Body: This attribute shows the similar score compare to Balance, 
+
+Body: This attribute shows the similar score compare to Balance. It is about the thickness of coffee when you drink it. If you see the coffee is quite strong, have alot of "coffee" in it, instead of some water with coffee flavor, then it is full body, and in contrast, it is light body. Sometimes this might make a confusion with underextraction but if you feel everything else is quite good, but not thick as you need, then it is about the body.  
+
 Aftertaste score is the lowest score, meaning that the feel of the taste stay not too long in the tongue. However, this is the high quality coffee, the aftertaste score is 7.6 in average which is that’s how we expected from the Aftertaste in coffee. Some decent coffee would have less aftertaste score, as it wont stay longer in the mouth. In general, customer could feel the sweet taste after drinking for a while, it’s how the aftertaste work. 
 
 ### Correlation analysis
@@ -117,6 +124,7 @@ plt.show()
 ![image](https://github.com/PouringInsights/pouringinsights.github.io/assets/100246099/566a8c21-917d-4e8a-bfcb-45f21f74a74b)
 
 The heatmap shows the correlation between each traits of coffee, with the red color as the high correlation and blue color as low correlation. However, the range in this heatmap are from 0.65 to 1, meaning that all the attributes are correlated to each other. Normally, the score of 0.6 represents the moderate correlation and score higher than 0.8 is high. Lets take a look at Total cup points, we can see that all the attributes have high correlate to total points, and the order from high to low is: Flavor, Balance, Aftertaste, Acidity, Aroma, Body. Interestingly, the Aroma and Body has lowest correlation, so the smell of coffee and the thickness of coffee are not really relevant, however, it has high correlation with flavor, meaning that if the smell of coffee is extremely good, we would expect the excellent flavor as well. 
+
 I personally love the coffee smell, the enticing aroma of coffee captivates my senses, immersing me in a world of delightful sensations and enhancing every moment. 
 Beside the relationship with Total cup points, some high correlation are from Flavor with Balance and Aftertaste. It seems like those scores have highly related to each other. 
 
@@ -181,9 +189,9 @@ plt.show()
 
 Most of the coffee in the dataset harvest from 2021-2022, around 100 observations which is recent data. It means that the above countries have interested in the specialty coffee and send the sample to the CQI to evaluate it. It doesn’t mean other countries have bad coffee overtime, it only proves that recently, CQI recorded that coffee from Ethiopia, Taiwan and Tanzania have the highest cupping score. 
 Let check the book to know more about those 3 origin: 
-Tanzania: According to James Hoffman, the taste profile of Tanzania coffee is complex, with bright and lively acidity and often with berry and fruity flavours. It can be juicy, interesting and delicious. 
-Ethiopia: The birthplace of coffee, its taste is diversity. It could be citrus, often bergamot, florals through to candied fruit or even tropical fruit flavors. The best washed coffee can be incredibly elegant, complex and delicious and the best naturally processed ones can be wildly fruity, and enchantingly unusual. 
-Taiwan: I cant find Taiwan in the book but China, it might because Taiwan is not considered as coffee region, so lets see what it said from China first. In China, the quality based auctions are increasingly popular and prices being paid for locally grown coffee are very high. This makes China an unusual market. China now exporting some excellent coffee, which is well worth seeking out. The taste profile from China have pleasant sweetness and fruitiness, though many still carry a little woodiness or earthiness too. Relatively low in acidity and often relatively full bodies. I would do the research for Taiwan coffee too to compare if it has different taste profile. Founder of San Formosan, Ding He Doong concluded that Taiwanese coffee has a sweet aftertaste and many people said it has tea like aroma. Ofcourse many production would have different characteristics but in general, the sweet aftertaste is the main tasting profile for Taiwanese coffee. 
+* Tanzania: According to James Hoffman, the taste profile of Tanzania coffee is complex, with bright and lively acidity and often with berry and fruity flavours. It can be juicy, interesting and delicious. 
+* Ethiopia: The birthplace of coffee, its taste is diversity. It could be citrus, often bergamot, florals through to candied fruit or even tropical fruit flavors. The best washed coffee can be incredibly elegant, complex and delicious and the best naturally processed ones can be wildly fruity, and enchantingly unusual. 
+* Taiwan: I cant find Taiwan in the book but China, it might because Taiwan is not considered as coffee region, so lets see what it said from China first. In China, the quality based auctions are increasingly popular and prices being paid for locally grown coffee are very high. This makes China an unusual market. China now exporting some excellent coffee, which is well worth seeking out. The taste profile from China have pleasant sweetness and fruitiness, though many still carry a little woodiness or earthiness too. Relatively low in acidity and often relatively full bodies. I would do the research for Taiwan coffee too to compare if it has different taste profile. Founder of San Formosan, Ding He Doong concluded that Taiwanese coffee has a sweet aftertaste and many people said it has tea like aroma. Ofcourse many production would have different characteristics but in general, the sweet aftertaste is the main tasting profile for Taiwanese coffee. 
 
 Next, I will explore the coffee varieties: 
 ### Varieties
@@ -294,9 +302,9 @@ Top Body Scores by Variety:
 
 
 In all the table above, the fancy coffee such as Castillo, Gesha, Java, Red Bourbon and SL34 are having high total cup scores, which make them become the most quality variety. However, some of them are expensive, and the number of production are usually small. This would be good for quality, but not for profit. Lets check the other table with the top score of some important attribute. 
-Flavor: It has similar names in this table, except for Ethiopian Heirlooms. It seems like the Ethiopia farmers are producing Heirlooms. As expected from the world famous coffee origin, the Heirlooms have the excellent flavor. This would be an option for coffee owner, everyone love Ethiopian coffee, see it as the top qualified coffee, and most of all, it is usually cheaper than other variety such as Gesha. 
-Balance: Beside Castillo and Gesha, there are SHG variety in the list. SHG (Strictly High Grown) specifies that the coffee was grown at an altitude around 1350 meters. Higher altitude generally means higher quality but at the expense of greater cost. As always, you get what you pay for. OK its another expensive one, might consider SL34 instead if the coffee owner prefer balancing in the taste
-Body: Some people love thickness, they feel like they need strong coffee and the full body coffee would give them the satisfaction, in this list, we have Castillo, Gesha, Bourbon, Caturra and Catimor. Most of varieties here have the achievable price except for Gesha in general. 
+* Flavor: It has similar names in this table, except for Ethiopian Heirlooms. It seems like the Ethiopia farmers are producing Heirlooms. As expected from the world famous coffee origin, the Heirlooms have the excellent flavor. This would be an option for coffee owner, everyone love Ethiopian coffee, see it as the top qualified coffee, and most of all, it is usually cheaper than other variety such as Gesha. 
+* Balance: Beside Castillo and Gesha, there are SHG variety in the list. SHG (Strictly High Grown) specifies that the coffee was grown at an altitude around 1350 meters. Higher altitude generally means higher quality but at the expense of greater cost. As always, you get what you pay for. OK its another expensive one, might consider SL34 instead if the coffee owner prefer balancing in the taste
+* Body: Some people love thickness, they feel like they need strong coffee and the full body coffee would give them the satisfaction, in this list, we have Castillo, Gesha, Bourbon, Caturra and Catimor. Most of varieties here have the achievable price except for Gesha in general. 
 import matplotlib.pyplot as plt
 
 ```python
@@ -372,6 +380,7 @@ Variety: Sl34+Gesha
 Countries: Taiwan
 
 It shows that the Castillo and Red Bourbon can be found in Colombia where having a lot of different varieties. Taiwan has a lot of good varieties such as Gesha, SL34. Laos and Thailand have Java varieties. 
+
 This result shows that it is good to contact with the producers from those countries to buy their coffee and start business because some of them are quite cheap compare to the other. The real analysis about pricing would be tested in another article because of the limited resource. 
 Now I would find the producer information for those varieties:
 
@@ -407,7 +416,7 @@ import plotly.graph_objects as go
 average_scores = df.groupby('Processing Method')['Total Cup Points'].mean().reset_index()
 average_scores = average_scores.sort_values('Total Cup Points', ascending=False)
 
-# Set color for top 3 bars
+# Set the colour for the top 3 bars
 colors = ['pink' if i < 3 else 'blue' for i in range(len(average_scores))]
 
 fig = go.Figure(data=[go.Bar(x=average_scores['Processing Method'],
@@ -420,9 +429,9 @@ fig.update_layout(title='Average Cupping Score by Processing Method',
 fig.update_yaxes(range=[75, 90])
 fig.show()
 ```
-The result shows that Double Anaerobic Washed (89.33), Semi washed (87.42), Honey, Mosto(87.08) are usually having high cupping score. It’s the interested result because the value is high, proving the excellent of the processing method. 
+The result shows that Double Anaerobic Washed (89.33), Semi washed (87.42), Honey, Mosto(87.08) are usually having high cupping scores. It’s an interesting result because the value is high, proving excellent of the processing method. 
 ```python
-# Group the data by processing method and calculate the average body score and flavor score
+# Group the data by processing method and calculate the average body score and flavour score
 processing_scores = df.groupby('Processing Method').agg({'Body': 'mean', 'Flavor': 'mean', 'Aftertaste': 'mean'}).reset_index()
 
 # Create a bar chart
@@ -440,4 +449,24 @@ bar_fig.show()
 ```
 ![image](https://github.com/PouringInsights/pouringinsights.github.io/assets/100246099/42c8b337-9741-442f-a691-728e07b51de5)
 
-The table above showing the comparison of processing method with body score, aftertaste score and flavor score. Let use the natural process as the benchmark because this is the most traditional method, it has the value around 7.6 in all the attribute. Some of processing method have the difference between 3 scores while some of it have similar score. For example: semi washed method would have higher flavor than other value while the double anaerobic washed hold high score in aftertaste. The Honey process is also showing higher score of aftertaste than other method. 
+The table above shows the comparison of the processing method with body score, aftertaste score and flavour score. Let's use the natural process as the benchmark because this is the most traditional method, it has a value of around 7.6 in all the attributes. Some processing methods have the difference between the 3 scores while some of them have similar scores. For example, the semi-washed method would have a higher flavour than other value while the double anaerobic washed hold a high score in the aftertaste. The Honey process is also showing a higher score of aftertaste than other methods. 
+
+### Conclusion 
+If you are reading everything here, thank you so much for reading my explanation, if not, no worries because I will save your time by summary of what I found. 
+After analysing carefully the coffee quality dataset in May 2023, scrapping from Quality Coffee Institute- a non-profit organization that works to improve the quality and value of coffee worldwide, some interesting information is found. 
+
+First of all, as expected of high-end coffee around the world, all the tasting traits have a score higher than 7/10, some values are 10 such as Sweetness, Clean Cup and Uniformity. Some important attributes such as Flavor, Balance, Body, Aftertaste, Acidity and Aroma range from 7.6 to 7.8, with flavour being the highest score and aftertaste being the lowest score, showing that high-quality coffee usually has excellent notes. However, the aftertaste is lower, meaning that it remains in the mouth not too long after drinking. The combination of notes from high-quality coffee is also good, as the score is quite high compared to the others, and the same with the body score. 
+
+Secondly, the correlation analysis shows how these attributes relate to each other as well as the total cup point. It found that all the traits have high related to total cup points, especially the flavour. Moreover, the result shows an interesting relationship between Aroma and Body Flavor. The good smell might not give rich in body but flavour, meaning that by the smell of coffee, you can find the coffee has excellent flavour. In addition, it seems that if the coffee has a high score in flavour, it also has a high score in balance and aftertaste, allowing drinkers to get a delightful cup of coffee. 
+
+In the exploratory of coffee origin, it found that Ethiopia secures the top position with the highest average cupping score. While this outcome is expected, it is the second and third rankings that astound with their unexpected performance. The result shows that the high-quality coffee recently is from Tanzania and Taiwan. It would be the simple result showing farmers from that country have given incredible coffee. Some key points from these taste profiles: 
+* Ethiopia: citrus, often bergamot, floral through to candied fruit or even tropical fruit flavours. 
+* Tanzania: complex, with bright and lively acidity, often with berry and fruity flavour. 
+* Taiwan: sweet aftertaste, tea-like aroma. 
+
+The research has found that some excellent coffee is usually Castillo, Gesha, Java, SL34, SHG, Caturra, Catimor and Ethiopian Heirlooms. Those coffee varieties have different attributes. For example: in overall: Castillo, Gesha, Java, Red Bourbon and SL34. For top flavour: Gesha, Castillo, Java, Red Bourbon and Ethiopian Heirlooms. Top Balance: Castillo, Gesha, SHG, Java, SL34. Top Body: Castillo, Gesha, Bourbon, Caturra, Catimor. The top quality coffee is usually expensive, especially Gesha or SHG. However, by finding where it has been planted, and finding a country that has many coffee varieties from the list, it could cut down the cost for coffee owners, or if you are a customer, you can easier choose coffee because the country of origin is always the first thing in the package of coffee. After running some analysis, I found that it is affordable to check coffee from Colombia, Ethiopia, Taiwan, Thailand or Laos. The processing that could be interesting besides the popular method of Natural, Washed and Honey is: Double Anaerobic washed and semi-washed. 
+
+### Future idea 
+The dataset is focused on the quality of coffee so this research is also about quality. It helps the readers understand why speciality coffee is good and breakdown all the scores of it. It's valuable for coffee shop owners to check how coffee farmers are doing and choose their producers for wholesale. It helps customers know which coffee has high quality if they are interested, and of course, not to mention the data analyst who is interested in the data insights. 
+
+Because the dataset has no business-related score I would like to find some other information about price, the menu or some information related to a coffee shop doing as well as competitors
