@@ -215,7 +215,7 @@ result_df = pd.DataFrame({'Country of Origin': top_countries, 'Varieties': top_v
 
 # Display the result as a table
 print(result_df)
-```
+
 
  Country of Origin 	                                         Varieties	Number of Varieties
  Colombia  	Bourbon Sidra, Castillo, Castillo Paraguaycito, Castillo and Colombia blend, Castillo,Caturra,Bourbon, Caturra, Caturra,Colombia,Castillo, Red Bourbon, Red Bourbon,Caturra, Santander, Typica Gesha	11
@@ -225,7 +225,7 @@ print(result_df)
  Nicaragua  	Bourbon, Bourbon, Catimor, Caturra, Typica, Catimor, Caturra, Gayo, Java, Typica, Typica Bourbon Caturra Catimor 	8
 
 In the table above, in the dataset, the Colombia has the highest number of coffee varieties, then Taiwan, Thailand, Guatemala and Nicaragua have the several of varieties that are high quality, it allows coffee shop owners choose the variety easier since each variety has different taste profile. Now let see which variety has the high score. 
-
+```
 ```python
 # Group the data by "Variety" and find the maximum cupping score for each variety
 top_cupping_scores = df.groupby('Variety')['Total Cup Points'].max().reset_index()
