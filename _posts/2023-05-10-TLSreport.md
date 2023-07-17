@@ -12,7 +12,7 @@ hidden: true
 
 Introducing the ultimate guild management companion: a dynamic weekly update dashboard for Maple Story M. Stay on top of activities, set goals, and access invaluable insights to foster motivation and create a welcoming guild atmosphere.
 
-The dashboard showcase is available [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vRfE01WV3VvT1nJbXA9RHHUCI62DCtKBRM0lCH7YLpGpVr6eERto3_x7OKrPgOvhhwZCxsxDXWYfR4B/pubhtml?gid=1968448146&single=true).
+The dashboard showcase is available [here](https://shorturl.at/djlX8).
 
 ## Key skills
 
